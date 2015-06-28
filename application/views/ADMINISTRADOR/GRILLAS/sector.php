@@ -26,8 +26,8 @@
                 <td><?= $filas->nombre_ciudad; ?></td>
                 <td><?= $filas->observacion; ?></td>
                 <td><?= $filas->estado; ?></td>        
-                <td><button onclick="eliminar_sector(<?= $filas->id_sector; ?>)"><span class="glyphicon glyphicon-trash"></span></button></td>        
-                <td><button onclick="cargar_sector(<?= $filas->id_sector; ?>, '<?= $filas->nombre_sector; ?>', '<?= $filas->ciudad; ?>', '<?= $filas->observacion; ?>', '<?= $filas->estado; ?>')"><span class="glyphicon glyphicon-repeat"></span></button></td>    
+                <td><button class="btn btn-danger" onclick="eliminar_sector(<?= $filas->id_sector; ?>)"><span class="glyphicon glyphicon-remove-circle"></span></button></td>        
+                <td><button class="btn btn-warning" onclick="cargar_sector(<?= $filas->id_sector; ?>, '<?= $filas->nombre_sector; ?>', '<?= $filas->ciudad; ?>', '<?= $filas->observacion; ?>', '<?= $filas->estado; ?>')"><span class="glyphicon glyphicon-circle-arrow-up"></span></button></td>    
             </tr>
             <?php else: ?>
             <tr align="center" class="warning" >
@@ -36,8 +36,8 @@
                 <td><?= $filas->nombre_ciudad; ?></td>
                 <td><?= $filas->observacion; ?></td>
                 <td><?= $filas->estado; ?></td>        
-                <td><button onclick="eliminar_sector(<?= $filas->id_sector; ?>)"><span class="glyphicon glyphicon-trash"></span></button></td>        
-                <td><button onclick="cargar_sector(<?= $filas->id_sector; ?>, '<?= $filas->nombre_sector; ?>', '<?= $filas->ciudad; ?>', '<?= $filas->observacion; ?>', '<?= $filas->estado; ?>')"><span class="glyphicon glyphicon-repeat"></span></button></td>    
+                <td><button class="btn btn-danger" onclick="eliminar_sector(<?= $filas->id_sector; ?>)"><span class="glyphicon glyphicon-remove-circle"></span></button></td>        
+                <td><button class="btn btn-warning" onclick="cargar_sector(<?= $filas->id_sector; ?>, '<?= $filas->nombre_sector; ?>', '<?= $filas->ciudad; ?>', '<?= $filas->observacion; ?>', '<?= $filas->estado; ?>')"><span class="glyphicon glyphicon-circle-arrow-up"></span></button></td>    
             </tr>
            <?php endif; ?>
         <?php endforeach; ?>

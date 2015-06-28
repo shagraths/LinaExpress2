@@ -26,8 +26,8 @@
                 <td><?= $filas->tipo_ciudad; ?></td> 
                 <td><?= $filas->observacion; ?></td>
                 <td><?= $filas->estado; ?></td>        
-                <td><button onclick="eliminar_ciudad(<?= $filas->id_ciudad; ?>)"><span class="glyphicon glyphicon-trash"></span></button></td>
-                <td><button onclick="cargar_ciudad(<?= $filas->id_ciudad; ?>, '<?= $filas->nombre_ciudad; ?>','<?= $filas->tipo_ciudad; ?>', '<?= $filas->observacion; ?>', '<?= $filas->estado; ?>')"><span class="glyphicon glyphicon-repeat"></span></button></td>    
+                <td><button class="btn btn-danger" onclick="eliminar_ciudad(<?= $filas->id_ciudad; ?>)"><span class="glyphicon glyphicon-remove-circle"></span></button></td>
+                <td><button class="btn btn-warning" onclick="cargar_ciudad(<?= $filas->id_ciudad; ?>, '<?= $filas->nombre_ciudad; ?>','<?= $filas->tipo_ciudad; ?>', '<?= $filas->observacion; ?>', '<?= $filas->estado; ?>')"><span class="glyphicon glyphicon-circle-arrow-up"></span></button></td>    
             </tr>
             <?php else: ?>
             <tr align="center" class="warning">
@@ -36,8 +36,8 @@
                 <td><?= $filas->tipo_ciudad; ?></td> 
                 <td><?= $filas->observacion; ?></td>
                 <td><?= $filas->estado; ?></td>        
-                <td><button onclick="eliminar_ciudad(<?= $filas->id_ciudad; ?>)"><span class="glyphicon glyphicon-trash"></span></button></td>
-                <td><button onclick="cargar_ciudad(<?= $filas->id_ciudad; ?>, '<?= $filas->nombre_ciudad; ?>','<?= $filas->tipo_ciudad; ?>', '<?= $filas->observacion; ?>', '<?= $filas->estado; ?>')"><span class="glyphicon glyphicon-repeat"></span></button></td>    
+                <td><button class="btn btn-danger" onclick="eliminar_ciudad(<?= $filas->id_ciudad; ?>)"><span class="glyphicon glyphicon-remove-circle"></span></button></td>
+                <td><button class="btn btn-warning" onclick="cargar_ciudad(<?= $filas->id_ciudad; ?>, '<?= $filas->nombre_ciudad; ?>','<?= $filas->tipo_ciudad; ?>', '<?= $filas->observacion; ?>', '<?= $filas->estado; ?>')"><span class="glyphicon glyphicon-circle-arrow-up"></span></button></td>    
             </tr>
         <?php endif; ?>
         <?php endforeach; ?>

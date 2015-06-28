@@ -16,7 +16,13 @@ function clickMenu(id){
         break;
       case 'ciudad':
         ciudad_admin();
-        break;     
+        break;  
+      case 'tipoCarta':
+        carta_admin();
+        break; 
+      case 'usuario':
+        usuario_admin();
+        break;   
     }
 
 }

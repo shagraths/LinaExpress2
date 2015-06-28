@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost/Prueba/index.php';
+$config['base_url'] = 'http://localhost/LinaExpress2/index.php';
 
 /*
 |--------------------------------------------------------------------------

@@ -1,7 +1,11 @@
-<? if ($cantidad == 0): ?>
-    <label>no registra tipos de cartas!!</label>
-<? else: ?>
-    <table>
+<?php if ($cantidad == 0): ?>
+    <table> 
+        <thead align="center">
+            <th>No registra Tipos de Cartas!</th>   
+        </thead>
+    </table> 
+<?php else: ?>
+    <table class="table">
         <thead align="center">
         <th>N°</th>    
         <th>Tipo</th>
@@ -11,29 +15,29 @@
         <th>Cargar</th>
     </thead>
     <tbody>
-        <? $i = 0; ?>
+        <?php $i = 0; ?>
         <?php foreach ($cartas as $filas): ?>
-            <? $i++; ?>
-            <? if ($i % 2 == 0): ?>
-            <tr align="center">
-                <td><?= $filas->id_carta; ?></td>        
-                <td><?= $filas->tipo; ?></td>
-                <td><?= $filas->observacion; ?></td>
-                <td><?= $filas->estado; ?></td>        
-                <td><button onclick="eliminar_carta(<?= $filas->id_carta; ?>)"><span class="ui-icon ui-icon-trash"></span></button></td>
-                <td><button onclick="cargar_carta(<?= $filas->id_carta; ?>, '<?= $filas->tipo; ?>', '<?= $filas->observacion; ?>', '<?= $filas->estado; ?>')"><span class="ui-icon ui-icon-circle-arrow-n"></span></button></td>    
+            <?php $i++; ?>
+            <?php if ($i % 2 == 0): ?>
+            <tr align="center" class="success">
+                <td><?= $filas->id_tipoCarta; ?></td>        
+                <td><?= $filas->Nombre; ?></td>
+                <td><?= $filas->Observacion; ?></td>
+                <td><?= $filas->Estado; ?></td>        
+                <td><button class="btn btn-danger" onclick="eliminar_tipo_carta(<?= $filas->id_tipoCarta; ?>)"><span class="glyphicon glyphicon-remove-circle"></span></button></td>
+                <td><button class="btn btn-warning" onclick="cargar_carta(<?= $filas->id_tipoCarta; ?>, '<?= $filas->Nombre; ?>', '<?= $filas->Observacion; ?>', '<?= $filas->Estado; ?>')"><span class="glyphicon glyphicon-circle-arrow-up"></span></button></td>    
             </tr>
-            <? else: ?>
-            <tr align="center" class="alt">
-                <td><?= $filas->id_carta; ?></td>        
-                <td><?= $filas->tipo; ?></td>
-                <td><?= $filas->observacion; ?></td>
-                <td><?= $filas->estado; ?></td>        
-                <td><button onclick="eliminar_carta(<?= $filas->id_carta; ?>)"><span class="ui-icon ui-icon-trash"></span></button></td>
-                <td><button onclick="cargar_carta(<?= $filas->id_carta; ?>, '<?= $filas->tipo; ?>', '<?= $filas->observacion; ?>', '<?= $filas->estado; ?>')"><span class="ui-icon ui-icon-circle-arrow-n"></span></button></td>    
+            <?php else: ?>
+            <tr align="center" class="warning">
+                <td><?= $filas->id_tipoCarta; ?></td>        
+                <td><?= $filas->Nombre; ?></td>
+                <td><?= $filas->Observacion; ?></td>
+                <td><?= $filas->Estado; ?></td>        
+                <td><button class="btn btn-danger" onclick="eliminar_tipo_carta(<?= $filas->id_tipoCarta; ?>)"><span class="glyphicon glyphicon-remove-circle"></span></button></td>
+                <td><button class="btn btn-warning" onclick="cargar_carta(<?= $filas->id_tipoCarta; ?>, '<?= $filas->Nombre; ?>', '<?= $filas->Observacion; ?>', '<?= $filas->Estado; ?>')"><span class="glyphicon glyphicon-circle-arrow-up"></span></button></td>    
             </tr>
-        <? endif; ?>
+        <?php endif; ?>
         <?php endforeach; ?>
     </tbody>
     </table>
-<? endif;
+<?php endif;
